@@ -16,15 +16,7 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-.nav.light a {
-    color: #353535;
-    font-weight: 500;
-}
 
-.nav.dark a {
-    color: #d6dde4;
-    font-weight: 500;
-}
 
 .buttonTheme {
     display: inline-block;
@@ -40,7 +32,7 @@
 }
 
 .buttonTheme.light {
-    border-color: #000000;
+    border-color: #161313;
 }
 
 .buttonTheme.dark {
@@ -55,4 +47,13 @@
 .dark {
     background-color: #1a1a1a;
     color: #d6dde4;
+}
+.nav.light a {
+    color: #353535;
+    font-weight: 500;
+}
+
+.nav.dark a {
+    color: #0477e9;
+    font-weight: 500;
 }

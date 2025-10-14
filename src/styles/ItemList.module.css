@@ -1,0 +1,66 @@
+/* src/Components/ItemList.module.css */
+.container {
+    padding: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.light {
+    background-color: #b8ccd1;
+    color: #353535;
+}
+
+.dark {
+    background-color: #1a1a1a;
+    color: #d6dde4;
+}
+
+.list {
+    display: grid;
+ 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.item {
+    border: 1px solid;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.item.light {
+    background: #f9f9f9;
+    border-color: #0c0c0c80;
+}
+
+.item.dark {
+    background: #333;
+    border-color: #dfdfdf;
+}
+
+.inStock {
+    color: rgb(66, 170, 66);
+}
+
+.outOfStock {
+    color: rgb(158, 27, 27);
+}
+
+.container p {
+    padding: 0;
+    margin: 0;
+
+}
+
+.container h3 {
+        text-align: center;
+}
