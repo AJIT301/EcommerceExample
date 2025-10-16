@@ -1,7 +1,7 @@
 // LanguageContext.ts
 import { createContext, useContext } from 'react';
 
-export type SupportedLanguage = 'EN' | 'LT' | 'UA' | 'NL' | 'DE' | 'FR';
+export type SupportedLanguage = 'EN' | 'LT' | 'UA' | 'NL';
 
 export interface LanguageContextType {
     language: SupportedLanguage;
