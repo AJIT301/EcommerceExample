@@ -1,7 +1,7 @@
 // ItemList.tsx (with loading state)
 import { useState, useEffect, useMemo } from 'react';
 import cx from 'classnames';
-import { mockItems } from '../data/itemS';
+import { mockItems } from '../data/Items';
 import type { Item } from '../types/TypeItem';
 import { useTheme } from '../context/theme/ThemeContext';
 import { useTranslation } from '../Hooks/useTranslation';
@@ -78,7 +78,7 @@ export default function ItemList() {
     }, []);
 
     if (loading) {
-        return <div className={cx(styles.container, styles[theme])}>{t('itemList.loading')}</div>;
+        return <div data-testid="item-list-container" className={cx(styles.container, styles[theme])}>{t('itemList.loading')}</div>;
     }
 
     const handleSearch = () => {
@@ -101,11 +101,12 @@ export default function ItemList() {
     };
 
     return (
-        <div className={cx(styles.container, styles[theme])}>
-            <div className={cx(styles.filters, styles[theme])}>
+        <div data-testid="item-list-container" className={cx(styles.container, styles[theme])}>
+            <div data-testid="filters" className={cx(styles.filters, styles[theme])}>
                 <div className={styles.searchGroup}>
                     <div className={styles.searchWrapper}>
                         <input
+                            data-testid="search-input"
                             type="text"
                             value={searchQuery}
                             onChange={handleSearchInputChange}
@@ -114,6 +115,7 @@ export default function ItemList() {
                             title="Search by product name"
                         />
                         <button
+                            data-testid="search-button"
                             type="button"
                             onClick={handleSearch}
                             className={cx(styles.searchButton, styles[theme])}
