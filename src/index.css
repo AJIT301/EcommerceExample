@@ -108,3 +108,16 @@ button {
   cursor: pointer;
   transition: border-color var(--transition);
 }
+button:hover {
+  border-color: #6c757d;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+

@@ -3,10 +3,12 @@ import { useState, type ReactNode } from 'react';
 import ThemeContext, { type Theme, type ThemeContextType } from './ThemeContext';
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-    const [theme, setTheme] = useState<Theme>('light');
+    const [theme, setTheme] = useState<Theme>(() => (localStorage.getItem('theme-eshop1') as Theme) || 'dark');
 
     const toggleTheme = () => {
-        setTheme(prev => prev === 'light' ? 'dark' : 'light');
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+        localStorage.setItem('theme-eshop1', newTheme);
     };
 
     const value: ThemeContextType = {

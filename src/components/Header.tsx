@@ -12,7 +12,7 @@ export default function Header() {
 
     const languages: { value: SupportedLanguage; label: string }[] = [
         { value: 'EN', label: 'English' },
-        { value: 'LT', label: 'Lietuviškai'},
+        { value: 'LT', label: 'Lietuvių'},
         { value: 'UA', label: 'Українська' },
         { value: 'NL', label: 'Nederlands' },
     ];
