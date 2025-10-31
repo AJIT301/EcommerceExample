@@ -102,7 +102,7 @@ export default function ItemList() {
 
     return (
         <div data-testid="item-list-container" className={cx(styles.container, styles[theme])}>
-            <div data-testid="filters" className={cx(styles.filters, styles[theme])}>
+            <div data-testid="filters" className={cx(styles.filters, theme === 'light' ? styles.filtersLight : styles.filtersDark)}>
                 <div className={styles.searchGroup}>
                     <div className={styles.searchWrapper}>
                         <input
